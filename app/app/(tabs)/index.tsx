@@ -3,7 +3,7 @@ import { View, Text, ScrollView } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <ScrollView className="flex-1 bg-white">
+    <ScrollView className="flex-1 bg-blue">
       {/* Header Section */}
       <View className="bg-blue-500 p-8 pt-16">
         <Text className="text-white text-3xl font-bold text-center">
