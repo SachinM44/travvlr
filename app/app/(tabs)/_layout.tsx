@@ -1,16 +1,21 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 import { IconSymbol } from '../../components/ui/icon-symbol.ios';
-import { useColorScheme } from '../../hooks/use-color-scheme.web';
+import { useThemeStore } from '@/constants/themes/useThemeStore';
 
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
+  const colors = useThemeStore((state) => state.colors);
 
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
+        tabBarActiveTintColor: colors.primary.default,
+        tabBarInactiveTintColor: colors.neutral.placeholder,
+        tabBarStyle: {
+          backgroundColor: colors.neutral.white,
+        },
       }}>
       <Tabs.Screen
         name="index"

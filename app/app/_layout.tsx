@@ -3,13 +3,16 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 import '../global.css';
+import { useThemeStore } from '@/constants/themes/useThemeStore';
 
 export default function RootLayout() {
+  const colors = useThemeStore((state) => state.colors);
+
   return (
-    <View style={{ flex: 1, backgroundColor: '#D86A6B' }}>
+    <View style={{ flex: 1, backgroundColor: colors.neutral.white }}>
       <Stack
         screenOptions={{
-          contentStyle: { backgroundColor: '#D86A6B' },
+          contentStyle: { backgroundColor: colors.neutral.white },
           headerShown: false,
         }}
       >
