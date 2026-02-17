@@ -7,7 +7,7 @@ export default function Login() {
     <Pressable>
       <View style=''>
         <Text> hell there </Text>
-        <Button size='medium' buttonType='primary' >hello there dd</Button>
+        <Button size='medium' buttonType='tertiary' >hello there dd</Button>
       </View>
     </Pressable>
   );
