@@ -1,10 +1,14 @@
+import { Button } from '@/components/Button';
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Pressable } from 'react-native';
 
 export default function Login() {
   return (
-   <View style=''>
-    <Text> hell there </Text>
-   </View>
+    <Pressable>
+      <View style=''>
+        <Text> hell there </Text>
+        <Button size='medium' buttonType='primary' >hello there dd</Button>
+      </View>
+    </Pressable>
   );
 }
